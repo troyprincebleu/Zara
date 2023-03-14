@@ -1,0 +1,80 @@
+body {
+  background-color: black;
+}
+
+.binary-numbers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.binary-numbers span {
+  position: absolute;
+  color: #0f0;
+  font-size: 20px;
+  font-family: monospace;
+  white-space: nowrap;
+  animation: animate 1ms linear infinite;
+  display: block;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #ddd;
+  z-index: 9999; /* Ajout de la propriété z-index */
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: #4caf50;
+  animation: progress 4s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+.centered-text {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 100%;
+  z-index: 99999;
+  margin-top: 16%;
+}
+
+.red-text {
+  color: red;
+}
+
+.big-text {
+  font-size: 3rem;
+}
+
